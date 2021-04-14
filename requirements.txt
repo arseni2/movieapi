@@ -14,9 +14,11 @@ django-allauth==0.44.0
 django-cors-headers==3.7.0
 django-environ==0.4.5
 django-filter==2.4.0
+django-heroku==0.3.1
 django-jinja==2.7.0
 django-oauth-toolkit==1.5.0
 django-oauth2-provider==0.2.6.1
+django-on-heroku==1.1.2
 django-templated-mail==1.1.1
 djangorestframework==3.12.4
 djangorestframework-jsonapi==4.1.0
@@ -28,6 +30,7 @@ filelock==3.0.12
 gunicorn==20.1.0
 idna==2.10
 inflection==0.5.1
+install==1.3.4
 itypes==1.2.0
 Jinja2==2.11.3
 jwcrypto==0.8
@@ -37,6 +40,7 @@ oauthlib==3.1.0
 Pillow==8.2.0
 pipenv==2020.11.15
 psycopg2==2.8.6
+psycopg2-binary==2.8.6
 pycparser==2.20
 PyJWT==2.0.1
 Pymem @ git+https://github.com/srounet/Pymem@029971dab4fed4d011fe916e65ea1d5868e1a670
