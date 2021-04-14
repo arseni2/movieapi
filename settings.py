@@ -16,9 +16,10 @@ SECRET_KEY = '#m@)f!-m277pbmj1(u&o_ye1do_b_+ciez4&4gr1n%oeeri(2a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 AUTH_USER_MODEL = 'apiapp.User'
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['herokuapp.com', 'react-movie-django']
 ACCOUNT_EMAIL_REQUIRED = False
-
+import django_heroku
+django_heroku.settings(locals())
 # Application definition
 APPEND_SLASH=False
 INSTALLED_APPS = [
@@ -48,6 +49,7 @@ REST_REGISTRATION = {
 }
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'corsheaders.middleware.CorsMiddleware',
@@ -210,3 +212,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [
+    STATIC_ROOT,
+]
