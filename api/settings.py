@@ -18,7 +18,8 @@ DEBUG = False
 AUTH_USER_MODEL = 'apiapp.User'
 ALLOWED_HOSTS = ['herokuapp.com', 'react-movie-django']
 ACCOUNT_EMAIL_REQUIRED = False
-
+import django_heroku
+django_heroku.settings(locals())
 # Application definition
 APPEND_SLASH=False
 INSTALLED_APPS = [
