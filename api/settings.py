@@ -16,7 +16,7 @@ SECRET_KEY = '#m@)f!-m277pbmj1(u&o_ye1do_b_+ciez4&4gr1n%oeeri(2a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 AUTH_USER_MODEL = 'apiapp.User'
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['herokuapp.com', ]
 ACCOUNT_EMAIL_REQUIRED = False
 
 # Application definition
