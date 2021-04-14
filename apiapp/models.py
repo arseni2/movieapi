@@ -20,7 +20,7 @@ class MyUserManager(BaseUserManager):
         user = self.model(
             email=self.normalize_email(email),
             name=name,
-            userPhotos=userPhotos,
+
         )
 
         user.set_password(password)
@@ -37,7 +37,7 @@ class MyUserManager(BaseUserManager):
             email,
             password=password,
             name=name,
-            userPhotos=userPhotos,
+
         )
         user.is_admin = True
         user.save(using=self._db)
@@ -59,7 +59,7 @@ class User(AbstractBaseUser):
     objects = MyUserManager()
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['name', 'userPhotos']
+    REQUIRED_FIELDS = ['name', ]
 
     def get_full_name(self):
         # The user is identified by their email address
